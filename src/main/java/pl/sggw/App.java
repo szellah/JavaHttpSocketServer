@@ -42,7 +42,7 @@ public class App {
         String request = "";
         Boolean isPost = false;
         while (((line = reader.readLine()) != null) && line.length()>0) {
-            if(request.isBlank())
+            if(request.equals(""))
                 request = line;
             if(request.contains("POST"))
                 isPost = true;
