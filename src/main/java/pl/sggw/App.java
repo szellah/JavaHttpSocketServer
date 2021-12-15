@@ -12,7 +12,7 @@ public class App {
         Database db = new Database();
         Api api = new Api(db);
 
-        ServerSocket serverSocket = new ServerSocket(8080);
+        ServerSocket serverSocket = new ServerSocket(System.getenv("PORT"));
         while (true) {
             listenAndServe(serverSocket, api);
         }
